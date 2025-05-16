@@ -4,6 +4,9 @@ import SideBar from "./components/sideBar/sideBar";
 import Main from "./ui/main";
 import Content from "./ui/content";
 import Profile from "./components/profile/profile";
+import Stats from "./components/stats/stats";
+import Team from "./components/team/team";
+import Event from "./components/event/event";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -27,8 +30,14 @@ const App = () => {
 
       <SideBar isSidebarOpen={isSidebarOpen} />
 
-      <Main>
-        <Content>Main Content</Content>
+      <Main className="h-screen">
+        <Content>
+          <Stats darkMode={darkMode} />
+          <div className="flex flex-col gap-3 lg:flex-row">
+            <Team />
+            <Event />
+          </div>
+        </Content>
         <Profile />
       </Main>
     </div>
