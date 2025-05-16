@@ -30,7 +30,7 @@ const App = () => {
 
       <SideBar isSidebarOpen={isSidebarOpen} />
 
-      <Main className="h-screen">
+      <Main>
         <Content>
           <Stats darkMode={darkMode} />
           <div className="flex flex-col gap-3 lg:flex-row">
